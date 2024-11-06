@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
-  title: 'YOOM',
-  description: 'A workspace for your team, powered by Stream Chat and Clerk.',
+  title: 'Courassy Visio',
+  description: 'Un espace de travail pour votre équipe, alimenté par Courassy.',
 };
 
 const RootLayout = ({ children }: Readonly<{children: ReactNode}>) => {

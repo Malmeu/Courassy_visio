@@ -8,11 +8,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
+import { frFR } from '@clerk/localizations'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "YOOM",
-  description: "Video calling App",
+  title: "Courassy",
+  description: "Courassy Visio App",
   icons: {
     icon: "/icons/logo.svg",
   },
@@ -22,15 +24,18 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    
+      
+    <html lang="fr">
       <ClerkProvider
+      localization={frFR}
         appearance={{
           layout: {
             socialButtonsVariant: "iconButton",
             logoImageUrl: "/icons/yoom-logo.svg",
           },
           variables: {
-            colorText: "#fff",
+            colorText: "#E5B586",
             colorPrimary: "#0E78F9",
             colorBackground: "#1C1F2E",
             colorInputBackground: "#252A41",
@@ -42,7 +47,9 @@ export default function RootLayout({
           <Toaster />
           {children}
         </body>
+        
       </ClerkProvider>
     </html>
+    
   );
 }
